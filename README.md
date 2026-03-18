@@ -1,2 +1,52 @@
-# SPIN-INOVACAO-HACK
-Desafio de inovação e tecnologia proposto pela Spin Engenharia, que tem como objetivo selecionar talentos para estágio por meio do desenvolvimento de soluções baseadas em Inteligência Artificial aplicada a problemas reais.
+# ⚙️ PreditIA: Sistema Inteligente de Manutenção Preditiva
+
+O **PreditIA** é uma solução de Monitoramento Industrial 4.0 que utiliza Machine Learning para diagnosticar a saúde de motores de indução trifásicos em tempo real. O projeto simula o ciclo completo de um engenheiro de dados: desde a geração de sinais ruidosos até a implementação de um dashboard preditivo.
+
+## 🚀 Funcionalidades
+
+- **Monitoramento em Tempo Real:** Interface interativa para ajuste de parâmetros de Temperatura, Vibração e Corrente.
+- **Diagnóstico com IA:** Classificação instantânea do estado do motor (*Saudável*, *Alerta* ou *Falha*) com cálculo de nível de certeza.
+- **Pipeline de Dados Robusto:** Tratamento automático de falhas de sensores, outliers e despadronização de dados.
+- **Visualização Industrial:** Gráficos de Gauge (velocímetros) e métricas dinâmicas para fácil interpretação.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Linguagem:** Python 3.x
+- **Bibliotecas de Dados:** Pandas, NumPy
+- **Machine Learning:** Scikit-Learn (Random Forest Classifier)
+- **Interface Gráfica:** Streamlit
+- **Visualização:** Plotly
+- **Serialização:** Joblib
+
+## 📁 Estrutura do Projeto
+
+* `gerador.py`: Cria dados sintéticos baseados em distribuições normais, simulando três fases de operação e injetando "caos" (erros de leitura e NaNs).
+* `tratamento_dados.py`: Realiza a limpeza dos dados brutos, corrige tipos de variáveis, trata outliers e rotula os dados conforme normas técnicas.
+* `machine_learning.py`: Treina o modelo Random Forest e exporta o "cérebro" do sistema (`.pkl`).
+* `app.py`: O painel de controle interativo construído em Streamlit.
+* `preditia.bat`: Script de inicialização rápida para Windows.
+* `requirements.txt`: Lista de dependências para instalação do ambiente.
+
+## 📈 Lógica de Diagnóstico (Critérios Técnicos)
+
+O sistema baseia-se em heurísticas de engenharia mecatrônica para a rotulagem:
+
+| Parâmetro | Saudável | Alerta | Falha (Risco) |
+| :--- | :--- | :--- | :--- |
+| **Temperatura** | < 80°C | 80°C - 95°C | > 95°C |
+| **Vibração** | < 3.5 mm/s | 3.5 - 6.5 mm/s | > 6.5 mm/s |
+| **Corrente** | < 15A | 15A - 17.25A | > 17.25A |
+
+## 🔧 Como Executar
+
+### Pré-requisitos
+Certifique-se de ter o Python instalado em sua máquina.
+
+### Instalação e Execução
+1. Clone este repositório.
+2. No Windows, basta executar o arquivo `preditia.bat`.
+   
+**Ou via terminal:**
+```bash
+pip install -r requirementes.txt
+streamlit run app.py
