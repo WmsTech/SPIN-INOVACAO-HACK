@@ -11,7 +11,7 @@ O **PreditIA** é uma solução de Monitoramento Industrial 4.0 que utiliza Mach
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Linguagem:** Python 3.x
+- **Linguagem:** Python 3.11
 - **Bibliotecas de Dados:** Pandas, NumPy
 - **Machine Learning:** Scikit-Learn (Random Forest Classifier)
 - **Interface Gráfica:** Streamlit
@@ -42,9 +42,13 @@ O sistema baseia-se em heurísticas de engenharia mecatrônica para a rotulagem:
 ### Pré-requisitos
 Certifique-se de ter o Python instalado em sua máquina.
 
-### Instalação e Execução
-1. Clone este repositório.
-2. No Windows, basta executar o arquivo `preditia.bat`.
+### Execução
+* É possivel acessar a aplicação de duas formas
+
+1. Diretamente pelo site https://preditia-monitoramento.streamlit.app/
+
+2. Clone este repositório.
+   No Windows, basta executar o arquivo `preditia.bat`.
    
 **Ou via terminal:**
 ```bash
