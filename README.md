@@ -1,5 +1,7 @@
 # ⚙️ PreditIA: Sistema Inteligente de Manutenção Preditiva
 
+![Painel PreditIA](img/dashboard.png)
+
 O **PreditIA** é uma solução de Monitoramento Industrial 4.0 que utiliza Machine Learning para diagnosticar a saúde de motores de indução trifásicos em tempo real. O projeto simula o ciclo completo de um engenheiro de dados: desde a geração de sinais ruidosos até a implementação de um dashboard preditivo.
 
 ## 🚀 Funcionalidades
