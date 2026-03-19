@@ -42,15 +42,34 @@ O sistema baseia-se em heurísticas de engenharia mecatrônica para a rotulagem:
 ## 🔧 Como Executar
 
 ### Pré-requisitos
-Certifique-se de ter o Python instalado em sua máquina.
+Certifique-se de ter o Python instalado em sua máquina e todas as bibliotecas necessárias.
+- **Linguagem:** Python 3.11
+- **Bibliotecas de Dados:** Pandas, NumPy
+- **Machine Learning:** Scikit-Learn (Random Forest Classifier)
+- **Interface Gráfica:** Streamlit
+- **Visualização:** Plotly
+- **Serialização:** Joblib
 
 ### Execução
 * É possivel acessar a aplicação de duas formas
 
-1. Diretamente pelo site https://preditia-monitoramento.streamlit.app/
 
-2. Clone este repositório.
+## 🚀 Diretamente na Web:
+   Acesse diretamente pelo site https://preditia-monitoramento.streamlit.app/
+
+
+## 🚀 Como rodar localmente:
+Clone este repositório.
    No Windows, basta executar o arquivo `preditia.bat`.
+
+Caso seja optado em realizar uma execução mais manual, garanta que todos os arquivos estejam em uma mesma pasta. Com isso, siga os seguintes passos:
+1. Instale as bibliotecas: `pip install -r requirements.txt`  # Caso não tenhsa sido instalado
+2. Gere os dados: `python gerador.py`
+3. Trate os dados: `python tratamento_dados.py`
+4. Treine a IA: `python machine_learning.py`
+5. Execute o App: `streamlit run app.py`
+   
+   
    
 **Ou via terminal:**
 ```bash
